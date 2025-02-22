@@ -1,0 +1,230 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e3a5f;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Tingkatkan z-index jika ada masalah dengan elemen lain yang menutupi */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Agar elemen bisa turun ke baris baru pada layar kecil */
+    gap: 20px; /* Beri jarak antar elemen */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* Hapus margin individual jika sudah menggunakan gap */
+}
+
+
+nav {
+    flex-grow: 1; /* Membuat navigasi menggunakan sisa ruang yang ada */
+    display: flex;
+    justify-content: right; /* Meratakan link navigasi di tengah */
+}
+
+nav {
+    margin-right: 50px; /* Menambahkan margin kiri pada navigasi */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;  /* Mengatur logo ke kiri */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a.active {
+    color: #FF6F00; /* Warna orange untuk link aktif */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FF6F00; /* Warna Orange saat hover */
+}
+
+/* Section Styles */
+section {
+    width: 100vw;
+    min-height: 100vh; /* Pastikan section memenuhi tinggi layar */
+    display: flex;
+    flex-direction: column; /* Susun konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    padding: 40px; /* Jaga agar konten tidak menempel di tepi */
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+    text-align: center; /* Agar teks rata tengah */
+}
+
+#overview {
+    img {
+        max-width: 100%; /* Gambar menyesuaikan lebar kontainer */
+        height: auto;    /* Menjaga proporsi */
+        border-radius: 10px; /* Memberikan efek sudut melengkung */
+    }
+    
+    .feature-image {
+        width: 80%; /* Atur lebar khusus */
+        margin-top: 20px;
+    }
+    
+    background-color: #1e3a5f;
+    color: white;
+}
+
+#features {
+    background-color: white;
+    color: #1e3a5f;
+}
+
+#interactive-prototype {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+#video-prototype {
+    background-color: white;
+    color: #1e3a5f;
+    
+}
+
+#documents {
+    background-color: #1e3a5f;
+    color: white;
+    /* Documents Section */
+.document-container {
+    display: flex;
+    flex-wrap: wrap; /* Jika terlalu banyak dokumen, pindah ke baris berikutnya */
+    justify-content: center;
+    gap: 20px; /* Jarak antar dokumen */
+    margin-top: 20px;
+}
+
+.document-link {
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.document-link:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.pdf-icon {
+    width: 80px; /* Ukuran ikon PDF */
+    height: auto;
+    margin-bottom: 10px;
+}
+}
+
+#about-us {
+    background-color: white;
+    color: #1e3a5f;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Batas maksimum untuk layar besar */
+    margin: auto; /* Pusatkan konten */
+    padding: 20px; /* Tambahkan ruang di dalam konten */
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran total */
+}
+header, nav, .logo {
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden; /* Pastikan tidak ada elemen keluar dari container */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Susun elemen navigasi secara vertikal */
+        gap: 10px; /* Sesuaikan jarak antar elemen */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Perkecil ukuran font */
+    }
+
+    .logo {
+        font-size: 20px; /* Perkecil ukuran logo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for mobile screens */
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
